@@ -7,9 +7,10 @@ let isInitialized = false;
 const getAi = (): GoogleGenAI | null => {
   if (ai) return ai;
 
+  // Use Vite's standard way to access environment variables
   const apiKey = import.meta.env.VITE_API_KEY;
   if (!apiKey || apiKey.trim() === '') {
-    console.warn("VITE_API_KEY is not set. Kaiden Assistant will be disabled.");
+    console.warn("VITE_API_KEY is not set in your Vercel project settings. Kaiden Assistant will be disabled.");
     return null;
   }
   
@@ -55,7 +56,7 @@ const getChat = (): Chat | null => {
 export const getKaidenResponse = async (message: string): Promise<string> => {
   const chatSession = getChat();
   if (!chatSession) {
-    return "My connection to the arcane energies is severed. Please ensure the sacred API key is correctly configured in the Vercel environment variables.";
+    return "My connection to the arcane energies is severed. Please ensure the sacred VITE_API_KEY is correctly configured in the Vercel project settings.";
   }
 
   try {
