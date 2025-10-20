@@ -2,7 +2,7 @@ import React from 'react';
 import { Page } from '../types';
 import AdventureButton from '../components/ui/AdventureButton';
 import ParchmentCard from '../components/ui/ParchmentCard';
-import { ArrowLeft, Code, Pyramid, Coffee } from 'lucide-react';
+import { ArrowLeft, Code, Pyramid, Coffee, FileCode2 } from 'lucide-react';
 
 interface CodingHomePageProps {
   navigateTo: (page: Page) => void;
@@ -48,7 +48,7 @@ const CodingHomePage: React.FC<CodingHomePageProps> = ({ navigateTo }) => {
             <LanguagePathCard 
                 title="JavaScript Path"
                 description="Learn the language of the web, from basic scripts to complex applications. This is the foundational journey for all web adventurers."
-                icon={<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" className="w-16 h-16"/>}
+                icon={<FileCode2 className="w-16 h-16 text-amber-glow" />}
                 onClick={() => navigateTo('coding')}
             />
              <LanguagePathCard 

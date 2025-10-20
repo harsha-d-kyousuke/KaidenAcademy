@@ -2,25 +2,34 @@ import { GoogleGenAI, Chat } from "@google/genai";
 
 let ai: GoogleGenAI | null = null;
 let chat: Chat | null = null;
+let isInitialized = false;
 
-const getAi = () => {
-  if (!ai) {
-    // VITE_API_KEY is the standard way Vite exposes environment variables.
-    // Vercel will securely inject this variable during the build process.
-    const apiKey = import.meta.env.VITE_API_KEY;
-    if (!apiKey) {
-      console.error("VITE_API_KEY is not set. Please add it to your Environment Variables in Vercel or in a .env file locally.");
-      throw new Error("API_KEY is not set.");
-    }
-    ai = new GoogleGenAI({ apiKey });
+const getAi = (): GoogleGenAI | null => {
+  if (ai) return ai;
+
+  const apiKey = import.meta.env.VITE_API_KEY;
+  if (!apiKey || apiKey.trim() === '') {
+    console.warn("VITE_API_KEY is not set. Kaiden Assistant will be disabled.");
+    return null;
   }
-  return ai;
+  
+  try {
+    ai = new GoogleGenAI({ apiKey });
+    return ai;
+  } catch (error) {
+    console.error("Failed to initialize GoogleGenAI:", error);
+    return null;
+  }
 }
 
-const getChat = () => {
-  if (!chat) {
-    const genAI = getAi();
-    const systemInstruction = [
+const getChat = (): Chat | null => {
+  if (chat) return chat;
+  
+  const genAI = getAi();
+  if (!genAI) return null;
+
+  if (!isInitialized) {
+      const systemInstruction = [
         `You are Kaiden, a friendly, warm, and encouraging magical guide for a coding academy. Your personality is inspired by wise and gentle mentors from fantasy stories.`,
         `- Your tone is always positive, patient, and uplifting.`,
         `- You use simple, easy-to-understand language.`,
@@ -30,19 +39,24 @@ const getChat = () => {
         `- Start your very first message with a warm greeting like "Greetings, adventurer! I am Kaiden, your guide on this grand coding quest. How may I assist you today?"`
       ].join('\n');
 
-    chat = genAI.chats.create({
-      model: 'gemini-2.5-flash',
-      config: {
-        systemInstruction: systemInstruction
-      },
-    });
+      chat = genAI.chats.create({
+        model: 'gemini-2.5-flash',
+        config: {
+          systemInstruction: systemInstruction
+        },
+      });
+      isInitialized = true;
   }
   return chat;
 }
 
 export const getKaidenResponse = async (message: string): Promise<string> => {
+  const chatSession = getChat();
+  if (!chatSession) {
+    return "My connection to the arcane energies is severed. Please ensure the sacred API key is correctly configured in the Vercel environment variables.";
+  }
+
   try {
-    const chatSession = getChat();
     const result = await chatSession.sendMessage({ message });
     return result.text;
   } catch (error) {
