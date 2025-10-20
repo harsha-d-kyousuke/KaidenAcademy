@@ -2,7 +2,7 @@ import React from 'react';
 import { Page } from '../types';
 import AdventureButton from '../components/ui/AdventureButton';
 import ParchmentCard from '../components/ui/ParchmentCard';
-import { ArrowLeft, Code } from 'lucide-react';
+import { ArrowLeft, Code, Pyramid, Coffee } from 'lucide-react';
 
 interface CodingHomePageProps {
   navigateTo: (page: Page) => void;
@@ -54,14 +54,14 @@ const CodingHomePage: React.FC<CodingHomePageProps> = ({ navigateTo }) => {
              <LanguagePathCard 
                 title="Python Path"
                 description="Master the versatile language of data science, AI, and backend development. A powerful tool for any creator."
-                icon={<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python" className="w-16 h-16"/>}
+                icon={<Pyramid className="w-16 h-16 text-sky-blue" />}
                 onClick={() => {}}
                 disabled={true}
             />
              <LanguagePathCard 
                 title="Java Path"
                 description="Embrace object-oriented programming to build robust, platform-independent applications from mobile to enterprise."
-                icon={<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png" alt="Java" className="w-16 h-12 object-contain"/>}
+                icon={<Coffee className="w-16 h-16 text-health-red" />}
                 onClick={() => {}}
                 disabled={true}
             />
