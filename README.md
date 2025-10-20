@@ -21,9 +21,14 @@ The project blends social simulation, skill progression, coding challenges, and 
 
 ## 📸 Screenshots
 
-*(You should add a screenshot or GIF of your application's dashboard here)*
-
-`![Kaiden Academy Dashboard](httpsg/dashboard.png)`
+<img width="1878" height="972" alt="251021_00h50m03s_screenshot" src="https://github.com/user-attachments/assets/827ef67c-c466-4979-bd43-03875c9b79ff" />
+<img width="1875" height="972" alt="251021_00h49m44s_screenshot" src="https://github.com/user-attachments/assets/db100fce-3ab2-4128-bfab-64c3f0f5c48a" />
+<img width="1824" height="930" alt="251021_00h49m07s_screenshot" src="https://github.com/user-attachments/assets/81e4d090-a084-4160-8c0d-577509465a08" />
+<img width="1860" height="963" alt="251021_00h48m39s_screenshot" src="https://github.com/user-attachments/assets/151202a3-8da0-4017-9479-20adb9dee071" />
+<img width="1867" height="982" alt="251021_00h48m08s_screenshot" src="https://github.com/user-attachments/assets/256c66b8-5019-4bcc-801c-d61bcae92e54" />
+<img width="1884" height="973" alt="251021_00h47m43s_screenshot" src="https://github.com/user-attachments/assets/a9bec8f8-c130-48ab-9ab2-57b093f733e9" />
+<img width="1873" height="960" alt="251021_00h47m02s_screenshot" src="https://github.com/user-attachments/assets/81d05ddc-626c-4e45-992c-8f65be1071d4" />
+<img width="1863" height="966" alt="251021_00h46m37s_screenshot" src="https://github.com/user-attachments/assets/de7e60fd-14d2-41f4-8183-3e861b9da15a" />
 
 ## 🧱 System Architecture
 
