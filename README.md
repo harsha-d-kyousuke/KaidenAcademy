@@ -1,4 +1,4 @@
-# Kaiden Academy — Life & Learning Simulator
+# 🎓 Kaiden Academy — Life & Learning Simulator
 
 ![React](https://img.shields.io/badge/React-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript)
@@ -9,7 +9,7 @@
 
 ---
 
-##  Overview
+## 🧭 Overview
 **Kaiden Academy** is an AI-enhanced **life-simulation and coding education game** built with **React + TypeScript + Vite**.  
 Manage your energy, relationships, and studies while mastering **Python, JavaScript, Java, and Algorithms** in a gamified environment.
 
@@ -17,18 +17,18 @@ Manage your energy, relationships, and studies while mastering **Python, JavaScr
 
 ---
 
-##  Features
+## ⚡ Features
 
-- **Coding Challenges** — JS, Python, Java, Algorithms with XP rewards  
-- **NPC Relationships** — Dialogue trees, friendship & romance states  
-- **Health & Gym** — Track fitness, diet, and rest  
-- **Mood & Focus** — Manage emotions and energy  
-- **Immersive Audio** — Ambient music, SFX, and voice tutorials  
-- **Campus Simulation** — Attend study sessions, join clubs, balance life  
+- 🧩 **Coding Challenges** — JS, Python, Java, Algorithms with XP rewards  
+- 💬 **NPC Relationships** — Dialogue trees, friendship & romance states  
+- 💪 **Health & Gym** — Track fitness, diet, and rest  
+- 🧘 **Mood & Focus** — Manage emotions and energy  
+- 🎵 **Immersive Audio** — Ambient music, SFX, and voice tutorials  
+- 🏫 **Campus Simulation** — Attend study sessions, join clubs, balance life  
 
 ---
 
-##  Structure
+## 🗂 Structure
 
 kaiden-academy/
 ├── public/
@@ -45,7 +45,7 @@ kaiden-academy/
 
 ---
 
-##  Game Systems
+## 🧠 Game Systems
 
 | System | Focus | Key Stats |
 |--------|--------|-----------|
@@ -56,7 +56,7 @@ kaiden-academy/
 
 ---
 
-##  Quick Start
+## ⚙️ Quick Start
 
 ```bash
 git clone https://github.com/yourusername/kaiden-academy.git
@@ -65,7 +65,7 @@ npm install
 npm run dev
 
 Then open → http://localhost:5173
- Challenge Format
+📚 Challenge Format
 
 {
   "id": "js_arrays_01",
@@ -78,11 +78,11 @@ Then open → http://localhost:5173
   "reward": { "xp": 10, "intellect": 5, "energy": -2 }
 }
 
- Tech Stack
+🧩 Tech Stack
 
 React • TypeScript • Vite • TailwindCSS • HTML5 Audio API
 Jest • ESLint • Prettier
- Roadmap
+🛣 Roadmap
 
 Multiplayer study sessions
 
@@ -92,12 +92,12 @@ Voice-acted storyline
 
     VR classroom & mobile app
 
- License
+📜 License
 
 For personal & educational use only.
 Feel free to fork, learn, and extend.
 
-Made by _ Adithiyaa J P
+Made with 💻 by Kaiden Academy Team
 Concept & design — Adithiyaa J P (Vel Tech, Chennai)
 
- 
+    ✨ Learn. Live. Code. Grow.
