@@ -122,7 +122,6 @@ export const storyEvents: StoryEvent[] = [
     icon: React.createElement(ShieldCheck, { className: 'text-health-red/50' }),
     trigger: (stats) => stats.intellect >= 100 && stats.health < 60,
     rewards: { health: -5, energy: -10 },
-    isTriggered: false
   },
   {
     id: 'peak_performance',
@@ -131,6 +130,5 @@ export const storyEvents: StoryEvent[] = [
     icon: React.createElement(Sparkles, { className: 'text-achievement-gold' }),
     trigger: (stats) => stats.intellect > 110 && stats.health > 110,
     rewards: { xp: 150, energy: 20, social: 5 },
-    isTriggered: false
   }
-].map(e => ({...e, isTriggered: false })));
+];
