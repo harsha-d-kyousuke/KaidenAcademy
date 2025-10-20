@@ -5,10 +5,14 @@ let chat: Chat | null = null;
 
 const getAi = () => {
   if (!ai) {
-    if (!process.env.API_KEY) {
-      throw new Error("API_KEY is not set in environment variables.");
+    // VITE_API_KEY is the standard way Vite exposes environment variables.
+    // Vercel will securely inject this variable during the build process.
+    const apiKey = import.meta.env.VITE_API_KEY;
+    if (!apiKey) {
+      console.error("VITE_API_KEY is not set. Please add it to your Environment Variables in Vercel or in a .env file locally.");
+      throw new Error("API_KEY is not set.");
     }
-    ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    ai = new GoogleGenAI({ apiKey });
   }
   return ai;
 }
