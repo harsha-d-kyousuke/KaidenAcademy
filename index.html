@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaiden Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather+Sans:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'parchment-light': '#FFF9F3',
+              'parchment-medium': '#F6E6CF',
+              'parchment-dark': '#EDE8D0',
+              'amber-glow': '#F2B661',
+              'sunset-peach': '#F0B76D',
+              'warm-gold': '#D8A04F',
+              'sage-green': '#9DC183',
+              'forest-mist': '#5B6D58',
+              'sky-blue': '#A3C7D6',
+              'ink-dark': '#3B2C19',
+              'shadow-soft': '#BFA08A',
+              'highlight-cream': '#FFFEF0',
+              'quest-active': '#C47B1E',
+              'achievement-gold': '#E8B740',
+              'magic-purple': '#9D7B9C',
+              'health-red': '#B44446',
+              'success-green': '#7BA88D',
+              'fitness-blue': '#6A8EAE',
+              'fitness-blue-light': '#A3C7D6',
+            },
+            fontFamily: {
+              heading: ['Poppins', 'sans-serif'],
+              body: ['Merriweather Sans', 'sans-serif'],
+              display: ['Quicksand', 'sans-serif'],
+            },
+            boxShadow: {
+              'adventure-press': '0 6px 0 #8c6230',
+              'adventure-press-active': '0 2px 0 #8c6230',
+              'parchment': '2px 3px 20px rgba(59, 44, 25, 0.15), 0 0 60px rgba(210, 160, 79, 0.1) inset',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              sparkle: {
+                '0%, 100%': { opacity: '0.5', transform: 'scale(0.8) translateY(0)' },
+                '50%': { opacity: '1', transform: 'scale(1.2) translateY(-20px)' },
+              },
+               pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 20px rgba(240, 183, 109, 0.6)' },
+                '50%': { boxShadow: '0 0 35px rgba(240, 183, 109, 1)' },
+              },
+              'pulse-gold': {
+                '0%, 100%': { boxShadow: '0 0 15px rgba(232, 183, 64, 0.5)' },
+                '50%': { boxShadow: '0 0 25px rgba(232, 183, 64, 1)' },
+              },
+              'path-shimmer': {
+                '0%': { transform: 'translateX(-150%) skewX(-15deg)' },
+                '100%': { transform: 'translateX(250%) skewX(-15deg)' },
+              },
+              'pulse-subtle': {
+                '0%, 100%': { boxShadow: '0 0 4px rgba(242, 182, 97, 0.3)' },
+                '50%': { boxShadow: '0 0 12px rgba(242, 182, 97, 0.7)' },
+              },
+              fadeIn: {
+                'from': { opacity: 0 },
+                'to': { opacity: 1 },
+              },
+              slideInUp: {
+                'from': { transform: 'translateY(20px)', opacity: 0 },
+                'to': { transform: 'translateY(0)', opacity: 1 },
+              },
+              slideInLeft: {
+                'from': { transform: 'translateX(-30px)', opacity: 0 },
+                'to': { transform: 'translateX(0)', opacity: 1 },
+              },
+              slideInRight: {
+                'from': { transform: 'translateX(30px)', opacity: 0 },
+                'to': { transform: 'translateX(0)', opacity: 1 },
+              },
+              confettiFall: {
+                '0%': { transform: 'translateY(-100%) rotateZ(0deg)', opacity: 1 },
+                '100%': { transform: 'translateY(100vh) rotateZ(360deg)', opacity: 0 },
+              },
+              'progress-bar-fill': {
+                'from': { width: '100%' },
+                'to': { width: '0%' },
+              }
+            },
+            animation: {
+              float: 'float 4s ease-in-out infinite',
+              sparkle: 'sparkle 3s ease-in-out infinite',
+              pulseGlow: 'pulseGlow 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'path-shimmer': 'path-shimmer 3s ease-in-out infinite',
+              'pulse-subtle': 'pulse-subtle 3s ease-in-out infinite',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-in-up': 'slideInUp 0.5s ease-out forwards',
+              'slide-in-left': 'slideInLeft 0.5s ease-out forwards',
+              'slide-in-right': 'slideInRight 0.5s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.25.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.546.0",
+    "@monaco-editor/react": "https://aistudiocdn.com/@monaco-editor/react@^4.7.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-parchment-light">
+    <div id="root"></div>
+  </body>
+</html>
