@@ -26,7 +26,9 @@ const getChat = (): Chat | null => {
   if (chat) return chat;
   
   const genAI = getAi();
-  if (!genAI) return null;
+  if (!genAI) {
+    return null; // Return early if AI initialization failed
+  }
 
   if (!isInitialized) {
       const systemInstruction = [
